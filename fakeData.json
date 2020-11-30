@@ -1,0 +1,29 @@
+[
+    {
+        "userName1": "Ashmee",
+        "date": "25/ 12/ 2020",
+        "description": "Happy christmas everyone. God may help us and this day will bring us happiness",
+        "img": "../image/christmas-tree.png",
+        "id": 1,
+        "userName2": "Anyone",
+        "nb_likes": 4
+    },
+    {
+        "userName1": "Ashmee",
+        "date": "12/ 11/ 2020",
+        "description": "Evry miracle begins with an inmpossibility",
+        "img": "photo.png",
+        "id": 2,
+        "userName2": "Anyone",
+        "nb_likes": 100
+    },
+    {
+        "userName1": "Ashmee",
+        "date": "05/ 10/ 2020",
+        "description": "We must never be ashamed  to shout out the name of jesus!",
+        "img": "photo.png",
+        "id": 3,
+        "userName2": "Anyone",
+        "nb_likes": 500
+    }
+]
