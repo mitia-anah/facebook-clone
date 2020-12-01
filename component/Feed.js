@@ -1,23 +1,34 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components';
 import Maneva from '../image/maneva-crop.jpg'
+import { Context } from '../FacebookContext'
 
 const Profile = styled.img`
-max-width: 20px;
-min-width: 20px
+max-width: 30px;
+min-width: 30px;
 `;
 
-function Feed({ post }) {
-    console.log(post);
+const UserPhoto = styled.img`
+max-width: 30px;
+min-width: 30px;
+border-radius: 50%;
+`;
+
+function Feed() {
+    const { post, like, onSubmit, handleChange, comment, addLike } = useContext(Context)
+    // console.log(post);
     return (
         <div>
             {post.map(data =>
-                <div key={data.id} >
+                <div key={data.postId} >
                     <div className="post-details">
-                        <div className='profile'>
-                            <Profile className="small" src={Maneva} />
-                            <span>{data.userName1}</span>
-                        </div>
+                        <ul className='profile'>
+                            <li>
+                                <Profile className="small" src={Maneva} />
+                                <span>{data.userId}</span>
+                            </li>
+                            <li>{data.date}</li>
+                        </ul>
                         <div className="post">
                             <p>{data.description}</p>
                             <picture>
@@ -25,26 +36,31 @@ function Feed({ post }) {
                             </picture>
                         </div>
                         <div>
-                            <button>Like Btn </button>
-                            <span>nbLikes:{data.nb_likes}🧡</span>
+                            <button onClick={addLike}>Like Btn </button>
+                            <span>nbLikes:{like}</span>
                         </div>
                     </div>
 
-                    <form>
-                        <ul className="comments">
+                    <form onSubmit={onSubmit}>
+                        <fieldset>
+                            <input
+                                placeholder="Add a comment"
+                                name="comments"
+                                value={comment}
+                                onChange={handleChange}
+                            />
+                            <button type="submit">Post</button>
+                        </fieldset>
+                        <ul key={data.userId} className="comments">
                             <li>
-                                <img src="" />
-                                <span>{data.userName2}</span>
+                                <h3>{data.userId}</h3>
+                                <p>{comment}</p>
                             </li>
                             <li>
                                 <Profile className="small" src={Maneva} />
                                 <span>{data.userName1}</span>
                             </li>
                         </ul>
-                        <fieldset>
-                            <input placeholder="Add a comment" />
-                            <button>Post</button>
-                        </fieldset>
                     </form>
                 </div>
             )}

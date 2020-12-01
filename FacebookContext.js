@@ -1,28 +1,56 @@
 import React, { useState, useEffect, useReducer } from 'react'
+import FakeData from './fakeData.json'
+import User from './User.json'
 
 const Context = React.createContext()
+let data = FakeData;
+let user = User
 
-function FacebookContext(props) {
-    const [state, dispatch] = useReducer((state, action) => {
-        switch (action.type) {
-            case 'INCREMENT': {
-                return { ...state, likeBtn: state.count + 1 }
-            }
-            default: {
-                return state
-            }
-        }
+function FacebookContext({ children }) {
+    const [post, setPost] = useState([])
+    const [comment, setComment] = useState('')
+    const [users, setUser] = useState([])
+    const [like, setLike] = useState(false)
+
+    useEffect(() => {
+        setPost(data)
+        setUser(user)
+        setComment(comment)
     })
 
-    let likeBtn = state;
-    let initialState = { likeBtn: 0 }
+    const handleChange = e => {
+        console.log(e.target);
+        setComment(e.target.value);
+    };
+    function addComment(e) {
+        e.preventDefault()
+        const userComments = e.target.value
+        e.preventDefault()
+        let newComment = {
+            userComments,
+            textId: Date.now(),
+        };
 
-    function addLike() {
-        dispatch({ type: "INCREMENT" })
+        setComment([...post, newComment]);
     }
+    function onSubmit(e) {
+        e.preventDefault()
+        if (e.target) return;
+        addComment()
+        setPost('')
+    }
+    function addLike() {
+        const findDataId = data.find(data => data.postId)
+        const dataId = findDataId.likes
+        const findLikeId = dataId.find(like => like.likeId)
+        if (findLikeId) {
+            setLike(like + 1)
+        }
+    }
+
     return (
-        <Context.Provider value={{}}>
-            {props.children}
+        <Context.Provider value={{ post, users, like, comment, handleChange, onSubmit, addComment, addLike }}>
+            {children}
         </Context.Provider>
     )
 }

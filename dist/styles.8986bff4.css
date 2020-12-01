@@ -1,5 +1,10 @@
 li {
     list-style: none;
 }
+.app {
+    max-width: 60%;
+    min-width: 60%;
+    margin: auto;
+}
 
 /*# sourceMappingURL=/styles.8986bff4.css.map */

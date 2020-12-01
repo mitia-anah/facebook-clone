@@ -6,12 +6,6 @@ import AddPost from './component/AddPost'
 import UserName from './component/UserName'
 
 function App() {
-    const [post, setPost] = useState([])
-    // console.log(post);
-
-    useEffect(() => {
-        setPost()
-    })
     return (
         <div className='app'>
             <h1>OnjaBook</h1>
@@ -28,7 +22,7 @@ function App() {
 
             <Switch>
                 <Route exact path="/">
-                    <Feed post={dataList} />
+                    <Feed />
                 </Route>
                 <Route exact path="/post">
                     <AddPost />
