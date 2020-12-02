@@ -6,3 +6,28 @@ li {
     min-width: 60%;
     margin: auto;
 }
+.menu-bar {
+    border: 1px solid;
+}
+.menu-list {
+    display: flex;
+    justify-content: space-between;
+    padding-inline-start: 0;
+    padding: 0.5rem;
+}
+.profile {
+    padding-inline-start: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.comments {
+    padding-inline-start: 0;
+}
+.user {
+    display: flex;
+  align-items: center;
+  gap: 1rem;
+}

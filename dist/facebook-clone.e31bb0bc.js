@@ -33856,8 +33856,9 @@ if ("development" !== "production") {
 },{"react-router":"node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"node_modules/react/index.js","history":"node_modules/history/esm/history.js","prop-types":"node_modules/prop-types/index.js","tiny-warning":"node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"fakeData.json":[function(require,module,exports) {
 module.exports = [{
   "postId": 1,
-  "userId": "1234",
-  "date": 1606834050018,
+  "userId": "Rosny",
+  "photo": "https://onja.org/wp-content/uploads/2020/07/Rosnyihf@2x-430x520.jpg",
+  "date": "12/05/2020",
   "description": "We must never be ashamed  to shout out the name of jesus!",
   "img": "https://www.christbiblechurch.org/uploads/4/8/6/5/48652749/7049195.png?250",
   "likes": [{
@@ -33870,13 +33871,13 @@ module.exports = [{
   "comment": [{
     "userComments": "Thank you! 🧡",
     "textId": 1,
-    "date": 12234452727288,
-    "userId": "1234"
+    "date": "13/08/2020",
+    "userId": "Anita"
   }, {
     "userComments": "This is Great! I love it 🧡",
     "textId": 2,
-    "date": 12234452884839,
-    "userId": "1234"
+    "date": "12/05/2020",
+    "userId": "Manjaka"
   }]
 }];
 },{}],"node_modules/shallowequal/index.js":[function(require,module,exports) {
@@ -35850,21 +35851,7 @@ exports.ServerStyleSheet = Ue;
 "production" !== "development" && "undefined" != typeof navigator && "ReactNative" === navigator.product && console.warn("It looks like you've imported 'styled-components' on React Native.\nPerhaps you're looking to import 'styled-components/native'?\nRead more about this at https://www.styled-components.com/docs/basics#react-native"), "production" !== "development" && "test" !== "development" && (window["__styled-components-init__"] = window["__styled-components-init__"] || 0, 1 === window["__styled-components-init__"] && console.warn("It looks like there are several instances of 'styled-components' initialized in this application. This may cause dynamic styles to not render properly, errors during the rehydration process, a missing theme prop, and makes your application bigger without good reason.\n\nSee https://s-c.sh/2BAXzed for more info."), window["__styled-components-init__"] += 1);
 var _default = qe;
 exports.default = _default;
-},{"react-is":"node_modules/react-is/index.js","react":"node_modules/react/index.js","shallowequal":"node_modules/shallowequal/index.js","@emotion/stylis":"node_modules/@emotion/stylis/dist/stylis.browser.esm.js","@emotion/unitless":"node_modules/@emotion/unitless/dist/unitless.browser.esm.js","@emotion/is-prop-valid":"node_modules/@emotion/is-prop-valid/dist/is-prop-valid.browser.esm.js","hoist-non-react-statics":"node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js","process":"../../AppData/Roaming/npm/node_modules/parcel-bundler/node_modules/process/browser.js"}],"image/maneva-crop.jpg":[function(require,module,exports) {
-module.exports = "/maneva-crop.82554306.jpg";
-},{}],"User.json":[function(require,module,exports) {
-module.exports = [{
-  "userId": "121212",
-  "userName": "Loïc",
-  "profilePictureUrl": "https://picsum.photos/100",
-  "birthDate": "13/09/1991"
-}, {
-  "userId": "1328237",
-  "userName": "Shaun",
-  "profilePictureUrl": "https://picsum.photos/100",
-  "birthDate": "12/04/2001"
-}];
-},{}],"FacebookContext.js":[function(require,module,exports) {
+},{"react-is":"node_modules/react-is/index.js","react":"node_modules/react/index.js","shallowequal":"node_modules/shallowequal/index.js","@emotion/stylis":"node_modules/@emotion/stylis/dist/stylis.browser.esm.js","@emotion/unitless":"node_modules/@emotion/unitless/dist/unitless.browser.esm.js","@emotion/is-prop-valid":"node_modules/@emotion/is-prop-valid/dist/is-prop-valid.browser.esm.js","hoist-non-react-statics":"node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js","process":"../../AppData/Roaming/npm/node_modules/parcel-bundler/node_modules/process/browser.js"}],"FacebookContext.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -35876,8 +35863,6 @@ exports.Context = void 0;
 var _react = _interopRequireWildcard(require("react"));
 
 var _fakeData = _interopRequireDefault(require("./fakeData.json"));
-
-var _User = _interopRequireDefault(require("./User.json"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -35892,6 +35877,12 @@ function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread n
 function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
 
 function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
@@ -35908,37 +35899,105 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var Context = _react.default.createContext();
 
 exports.Context = Context;
-var data = _fakeData.default;
-var user = _User.default;
 
 function FacebookContext(_ref) {
   var children = _ref.children;
+  var data = _fakeData.default;
 
-  var _useState = (0, _react.useState)([]),
+  var _useState = (0, _react.useState)(''),
       _useState2 = _slicedToArray(_useState, 2),
-      post = _useState2[0],
-      setPost = _useState2[1];
+      comment = _useState2[0],
+      setComment = _useState2[1];
 
-  var _useState3 = (0, _react.useState)(''),
+  var _useState3 = (0, _react.useState)(false),
       _useState4 = _slicedToArray(_useState3, 2),
-      comment = _useState4[0],
-      setComment = _useState4[1];
+      like = _useState4[0],
+      setLike = _useState4[1];
 
-  var _useState5 = (0, _react.useState)([]),
-      _useState6 = _slicedToArray(_useState5, 2),
-      users = _useState6[0],
-      setUser = _useState6[1];
+  var _useReducer = (0, _react.useReducer)(function (state, action) {
+    switch (action.type) {
+      case 'POST':
+        {
+          return _objectSpread(_objectSpread({}, state), {}, {
+            posts: data
+          });
+        }
 
-  var _useState7 = (0, _react.useState)(false),
-      _useState8 = _slicedToArray(_useState7, 2),
-      like = _useState8[0],
-      setLike = _useState8[1];
+      case 'ADD_NEW_COMMENT_TO_POST':
+        {
+          var newPosts = state.posts.map(function (post) {
+            if (post.postId === action.postId) {
+              // update the post
+              return _objectSpread(_objectSpread({}, post), {}, {
+                comments: [].concat(_toConsumableArray(post.comments), [action.comment])
+              });
+            }
+
+            return post;
+          });
+          return _objectSpread(_objectSpread({}, state), {}, {
+            posts: newPosts
+          });
+        }
+
+      case 'ADD_NEW-POST':
+        {
+          var addNewPosts = state.posts.map(function (post) {
+            if (post.postId === action.postId) {
+              // update the post
+              // recreate the new post collection
+              // we need the ID of the post we want to comment on
+              // dispatch({type: "ADD_NEW_COMMENT_TO_POST", postId: postId, comment: newComment})
+              //action.postId
+              //action.comment
+              // {
+              //     "commentId": 1,
+              //     "userId": "121212",
+              //     "date": 12423232423,
+              //     "commentTextContent": "Hello, super post.
+              return _objectSpread(_objectSpread({}, post), {}, {
+                comments: [].concat(_toConsumableArray(post.comments), [action.comment])
+              });
+            }
+
+            return post;
+          });
+          return _objectSpread(_objectSpread({}, state), {}, {
+            posts: addNewPosts
+          });
+        }
+    }
+  }, {
+    posts: [],
+    users: [],
+    userLoggedIn: ''
+  }),
+      _useReducer2 = _slicedToArray(_useReducer, 2),
+      state = _useReducer2[0],
+      dispatch = _useReducer2[1];
+
+  function addNewPost(e) {
+    e.preventDefault();
+    var form = e.target;
+    var text = form.posts.value;
+    var inputUrl = form.inputUrl.value;
+    var newPosts = {
+      date: Date.now(),
+      description: text,
+      img: inputUrl,
+      postId: Date.now(),
+      comments: [],
+      likes: [],
+      userId: ''
+    };
+    dispatch([].concat(_toConsumableArray(state), [newPosts]));
+  }
 
   (0, _react.useEffect)(function () {
-    setPost(data);
-    setUser(user);
-    setComment(comment);
-  });
+    dispatch({
+      type: "POST"
+    });
+  }, []);
 
   var handleChange = function handleChange(e) {
     console.log(e.target);
@@ -35947,20 +36006,21 @@ function FacebookContext(_ref) {
 
   function addComment(e) {
     e.preventDefault();
-    var userComments = e.target.value;
+    var form = e.target;
+    var userComment = form.comments.value;
+    console.log(userComment);
     e.preventDefault();
     var newComment = {
-      userComments: userComments,
+      userComments: userComment,
       textId: Date.now()
     };
-    setComment([].concat(_toConsumableArray(post), [newComment]));
+    dispatch([].concat(_toConsumableArray(state), [newComment]));
   }
 
   function onSubmit(e) {
     e.preventDefault();
     if (e.target) return;
-    addComment();
-    setPost('');
+    addComment(); // setComment('')
   }
 
   function addLike() {
@@ -35979,18 +36039,19 @@ function FacebookContext(_ref) {
 
   return /*#__PURE__*/_react.default.createElement(Context.Provider, {
     value: {
-      post: post,
-      users: users,
+      state: state,
+      dispatch: dispatch,
       like: like,
       comment: comment,
       handleChange: handleChange,
       onSubmit: onSubmit,
       addComment: addComment,
-      addLike: addLike
+      addLike: addLike,
+      addNewPost: addNewPost
     }
   }, children);
 }
-},{"react":"node_modules/react/index.js","./fakeData.json":"fakeData.json","./User.json":"User.json"}],"component/Feed.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./fakeData.json":"fakeData.json"}],"component/Feed.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36002,8 +36063,6 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _manevaCrop = _interopRequireDefault(require("../image/maneva-crop.jpg"));
-
 var _FacebookContext = require("../FacebookContext");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -36013,7 +36072,7 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\nmax-width: 30px;\nmin-width: 30px;\nborder-radius: 50%;\n"]);
+  var data = _taggedTemplateLiteral(["\n    max-width: 30px;\n    min-width: 30px;\nborder-radius: 50%;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -36023,7 +36082,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\nmax-width: 30px;\nmin-width: 30px;\n"]);
+  var data = _taggedTemplateLiteral(["\nmax-width: 30px;\nmin-width: 30px;\nborder-radius: 50%;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -36040,24 +36099,28 @@ var UserPhoto = _styledComponents.default.img(_templateObject2());
 
 function Feed() {
   var _useContext = (0, _react.useContext)(_FacebookContext.Context),
-      post = _useContext.post,
+      state = _useContext.state,
+      dispatch = _useContext.dispatch,
       like = _useContext.like,
-      onSubmit = _useContext.onSubmit,
-      handleChange = _useContext.handleChange,
       comment = _useContext.comment,
-      addLike = _useContext.addLike; // console.log(post);
+      handleChange = _useContext.handleChange,
+      addComment = _useContext.addComment,
+      addLike = _useContext.addLike;
 
+  var posts = state.posts; // console.log(post);
 
-  return /*#__PURE__*/_react.default.createElement("div", null, post.map(function (data) {
+  return /*#__PURE__*/_react.default.createElement("div", null, posts.map(function (data) {
     return /*#__PURE__*/_react.default.createElement("div", {
       key: data.postId
     }, /*#__PURE__*/_react.default.createElement("div", {
       className: "post-details"
     }, /*#__PURE__*/_react.default.createElement("ul", {
       className: "profile"
-    }, /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(Profile, {
+    }, /*#__PURE__*/_react.default.createElement("li", {
+      className: "user"
+    }, /*#__PURE__*/_react.default.createElement(Profile, {
       className: "small",
-      src: _manevaCrop.default
+      src: data.photo
     }), /*#__PURE__*/_react.default.createElement("span", null, data.userId)), /*#__PURE__*/_react.default.createElement("li", null, data.date)), /*#__PURE__*/_react.default.createElement("div", {
       className: "post"
     }, /*#__PURE__*/_react.default.createElement("p", null, data.description), /*#__PURE__*/_react.default.createElement("picture", null, /*#__PURE__*/_react.default.createElement("img", {
@@ -36065,27 +36128,33 @@ function Feed() {
     }))), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
       onClick: addLike
     }, "Like Btn "), /*#__PURE__*/_react.default.createElement("span", null, "nbLikes:", like))), /*#__PURE__*/_react.default.createElement("form", {
-      onSubmit: onSubmit
-    }, /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("input", {
-      placeholder: "Add a comment",
-      name: "comments",
-      value: comment,
-      onChange: handleChange
-    }), /*#__PURE__*/_react.default.createElement("button", {
-      type: "submit"
-    }, "Post")), /*#__PURE__*/_react.default.createElement("ul", {
+      onSubmit: addComment
+    }, /*#__PURE__*/_react.default.createElement("ul", {
       key: data.userId,
       className: "comments"
-    }, /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("h3", null, data.userId), /*#__PURE__*/_react.default.createElement("p", null, comment)), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(Profile, {
+    }, /*#__PURE__*/_react.default.createElement("li", {
+      className: "user"
+    }, /*#__PURE__*/_react.default.createElement("p", null)), /*#__PURE__*/_react.default.createElement("li", {
+      className: "user"
+    }, /*#__PURE__*/_react.default.createElement(Profile, {
       className: "small",
-      src: _manevaCrop.default
-    }), /*#__PURE__*/_react.default.createElement("span", null, data.userName1)))));
+      src: data.photo
+    }), /*#__PURE__*/_react.default.createElement("span", null, data.userId))), /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("input", {
+      placeholder: "Add a comment",
+      type: "text",
+      name: "comments",
+      value: comment,
+      onChange: handleChange,
+      autoComplete: "off"
+    }), /*#__PURE__*/_react.default.createElement("button", {
+      type: "submit"
+    }, "Post"))));
   }));
 }
 
 var _default = Feed;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../image/maneva-crop.jpg":"image/maneva-crop.jpg","../FacebookContext":"FacebookContext.js"}],"component/AddPost.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../FacebookContext":"FacebookContext.js"}],"component/AddPost.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36093,26 +36162,76 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _FacebookContext = require("../FacebookContext");
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function Post() {
+  // console.log(newPost);
+  var _useState = (0, _react.useState)(''),
+      _useState2 = _slicedToArray(_useState, 2),
+      description = _useState2[0],
+      setDescription = _useState2[1];
+
+  var _useContext = (0, _react.useContext)(_FacebookContext.Context),
+      addNewPost = _useContext.addNewPost; // const handleSubmit = (e) => {
+  //     e.preventDefault();
+  //     let newPosts = {
+  //         date: Date.now(),
+  //         description,
+  //         img: '',
+  //         postId: Date.now(),
+  //         comments: [],
+  //         likes: [],
+  //         userId: ''
+  //     };
+  // console.log(e.target.post.value);
+  // post.push(newPost);
+  // console.log(newPosts);
+  // setPost([...post]);
+  // addPost(newPosts);
+  // }
+
+
   return /*#__PURE__*/_react.default.createElement("form", {
-    className: "new-post"
+    className: "new-post",
+    onSubmit: addNewPost
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "form-group"
   }, /*#__PURE__*/_react.default.createElement("label", null, "New Post:"), /*#__PURE__*/_react.default.createElement("textarea", {
     className: "text",
-    placeholder: "Say what's in your mind"
+    placeholder: "Say what's in your mind",
+    type: "text",
+    name: "posts",
+    value: description,
+    onChange: function onChange(e) {
+      return setDescription(e.target.value);
+    }
   })), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("label", null, "Picture Url:"), /*#__PURE__*/_react.default.createElement("input", {
-    placeholder: ""
+    placeholder: "",
+    name: "inputUrl"
   })), /*#__PURE__*/_react.default.createElement("button", null, "Post"));
 }
 
 var _default = Post;
 exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"component/UserName.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../FacebookContext":"FacebookContext.js"}],"component/UserName.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36236,7 +36355,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57288" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60295" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

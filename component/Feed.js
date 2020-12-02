@@ -1,30 +1,31 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components';
-import Maneva from '../image/maneva-crop.jpg'
 import { Context } from '../FacebookContext'
 
 const Profile = styled.img`
 max-width: 30px;
 min-width: 30px;
+border-radius: 50%;
 `;
 
 const UserPhoto = styled.img`
-max-width: 30px;
-min-width: 30px;
+    max-width: 30px;
+    min-width: 30px;
 border-radius: 50%;
 `;
 
 function Feed() {
-    const { post, like, onSubmit, handleChange, comment, addLike } = useContext(Context)
+    const { state, dispatch, like, comment, handleChange, addComment, addLike } = useContext(Context)
+    const { posts } = state
     // console.log(post);
     return (
         <div>
-            {post.map(data =>
+            {posts.map(data =>
                 <div key={data.postId} >
-                    <div className="post-details">
+                    <div className="post-details" >
                         <ul className='profile'>
-                            <li>
-                                <Profile className="small" src={Maneva} />
+                            <li className="user">
+                                <Profile className="small" src={data.photo} />
                                 <span>{data.userId}</span>
                             </li>
                             <li>{data.date}</li>
@@ -41,26 +42,27 @@ function Feed() {
                         </div>
                     </div>
 
-                    <form onSubmit={onSubmit}>
+                    <form onSubmit={addComment}>
+                        <ul key={data.userId} className="comments">
+                            <li className="user">
+                                <p></p>
+                            </li>
+                            <li className="user">
+                                <Profile className="small" src={data.photo} />
+                                <span>{data.userId}</span>
+                            </li>
+                        </ul>
                         <fieldset>
                             <input
                                 placeholder="Add a comment"
+                                type="text"
                                 name="comments"
                                 value={comment}
                                 onChange={handleChange}
+                                autoComplete="off"
                             />
                             <button type="submit">Post</button>
                         </fieldset>
-                        <ul key={data.userId} className="comments">
-                            <li>
-                                <h3>{data.userId}</h3>
-                                <p>{comment}</p>
-                            </li>
-                            <li>
-                                <Profile className="small" src={Maneva} />
-                                <span>{data.userName1}</span>
-                            </li>
-                        </ul>
                     </form>
                 </div>
             )}
