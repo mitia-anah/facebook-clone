@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
-import App from './App'
-import FacebookContext from './component/FacebookContext'
+import App from './component/App'
+import { GlobalContextProvider } from './component/FacebookContext'
 
 ReactDOM.render(
-    <FacebookContext>
+    <GlobalContextProvider>
         <Router>
             <App />
         </Router>
-    </FacebookContext>,
+    </GlobalContextProvider>
+    ,
     document.getElementById('root')
 );

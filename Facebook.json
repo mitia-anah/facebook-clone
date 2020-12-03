@@ -1,6 +1,6 @@
 [
     {
-        "postId": 1,
+        "postId": "1",
         "userId": "Rosny",
         "photo": "https://onja.org/wp-content/uploads/2020/07/Rosnyihf@2x-430x520.jpg",
         "date": "12/05/2020",
@@ -9,25 +9,25 @@
         "likes": [
             {
                 "likeId": "1",
-                "userId": "1234"
+                "userId": "1"
             },
             {
                 "likeId": "2",
-                "userId": "1234"
+                "userId": "2"
             }
         ],
         "comment": [
             {
                 "userComments": "Thank you! 🧡",
-                "textId": 1,
+                "textId": "1",
                 "date": "13/08/2020",
-                "userId": "Anita"
+                "userId": "1"
             },
             {
                 "userComments": "This is Great! I love it 🧡",
-                "textId": 2,
+                "textId": "2",
                 "date": "12/05/2020",
-                "userId": "Manjaka"
+                "userId": "2"
             }
         ]
     }
