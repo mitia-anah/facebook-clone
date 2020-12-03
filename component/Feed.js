@@ -17,23 +17,23 @@ border-radius: 50%;
 function Feed() {
     const { state, dispatch, like, comment, handleChange, addComment, addLike } = useContext(Context)
     const { posts } = state
-    // console.log(post);
+    console.log(posts);
     return (
         <div>
-            {posts.map(data =>
-                <div key={data.postId} >
+            {posts.map(post =>
+                <div key={post.postId} >
                     <div className="post-details" >
                         <ul className='profile'>
                             <li className="user">
-                                <Profile className="small" src={data.photo} />
-                                <span>{data.userId}</span>
+                                <Profile className="small" src={post.photo} />
+                                <span>{post.userId}</span>
                             </li>
-                            <li>{data.date}</li>
+                            <li>{post.date}</li>
                         </ul>
                         <div className="post">
-                            <p>{data.description}</p>
+                            <p>{post.description}</p>
                             <picture>
-                                <img src={data.img} />
+                                <img src={post.image} />
                             </picture>
                         </div>
                         <div>
@@ -43,13 +43,13 @@ function Feed() {
                     </div>
 
                     <form onSubmit={addComment}>
-                        <ul key={data.userId} className="comments">
+                        <ul key={post.userId} className="comments">
                             <li className="user">
                                 <p></p>
                             </li>
                             <li className="user">
-                                <Profile className="small" src={data.photo} />
-                                <span>{data.userId}</span>
+                                <Profile className="small" src={post.photo} />
+                                <span>{post.userId}</span>
                             </li>
                         </ul>
                         <fieldset>

@@ -2,26 +2,24 @@ import React, { useContext, useState } from 'react'
 import { Context } from '../FacebookContext'
 
 function Post() {
-    // console.log(newPost);
-    const [description, setDescription] = useState('');
-    const { addNewPost } = useContext(Context);
+    const [description, setDescription] = useState('')
+    const [image, setImage] = useState('')
+    const { state, dispatch } = useContext(Context)
 
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     let newPosts = {
-    //         date: Date.now(),
-    //         description,
-    //         img: '',
-    //         postId: Date.now(),
-    //         comments: [],
-    //         likes: [],
-    //         userId: ''
-    //     };
-    // console.log(e.target.post.value);
-    // post.push(newPost);
-    // console.log(newPosts);
-    // setPost([...post]);
-    // addPost(newPosts);
+    function addNewPost(e) {
+        e.preventDefault()
+        let newPost = {
+            postId: Date.now(),
+            date: Date.now(),
+            description: description,
+            image: image,
+            comments: [],
+            likes: [],
+            userId: ''
+        };
+        dispatch({ type: 'ADD_NEW_POST', newPost })
+    }
+
     // }
     return (
         <form className="new-post" onSubmit={addNewPost}>
@@ -29,9 +27,8 @@ function Post() {
                 <label>New Post:</label>
                 <textarea
                     className="text"
-                    placeholder="Say what's in your mind"
+                    placeholder="Say what's in your mind..."
                     type="text"
-                    name="posts"
                     value={description}
                     onChange={(e) => setDescription(e.target.value)} >
                 </textarea>
@@ -39,8 +36,9 @@ function Post() {
             <div>
                 <label>Picture Url:</label>
                 <input
-                    placeholder=""
-                    name="inputUrl" />
+                    placeholder="Paste an URL"
+                    value={image}
+                    onChange={(e) => setImage(e.terget.value)} />
             </div>
             <button>Post</button>
 
