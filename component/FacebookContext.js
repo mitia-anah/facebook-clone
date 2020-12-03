@@ -15,6 +15,28 @@ function GlobalContextProvider({ children }) {
                     users: UserData,
                 }
             }
+            case 'ADD_NEW_POST': {
+                return {
+                    ...state,
+                    posts: [...state.posts, action.newPost]
+                }
+            }
+            case 'UPDATE_CURRENT_USER': {
+                const newUsersArray = state.users.map(user => {
+                    if (user.userId === state.currentUser) {
+                        return {
+                            ...user,
+                            profilePicture: action.profilePictureUrl,
+                            userName: action.userName
+                        }
+                    }
+                    return user
+                })
+                return {
+                    ...state,
+                    users: newUsersArray
+                }
+            }
             default:
                 log.error('No action defined', action.type)
                 break;
@@ -24,7 +46,7 @@ function GlobalContextProvider({ children }) {
         loading: true,
         posts: [],
         users: [],
-        currentUser: '',
+        currentUser: '1',
     })
 
     useEffect(() => {
